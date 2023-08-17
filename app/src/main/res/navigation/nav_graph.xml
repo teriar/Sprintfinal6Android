@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/LIstItems"
-        android:name="com.example.cl.sprintfinalm6.LIstItems"
+        android:name="com.example.cl.sprintfinalm6.Presentation.LIstItems"
         android:label="fragment_list_items"
         tools:layout="@layout/fragment_list_items" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.cl.sprintfinalm6.DetailFragment"
+        android:name="com.example.cl.sprintfinalm6.Presentation.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
 </navigation>
