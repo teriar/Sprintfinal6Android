@@ -1,4 +1,4 @@
-package com.example.cl.sprintfinalm6.remote
+package com.example.cl.sprintfinalm6.data.remote
 
 data class DetailPhone(
     val id:Int,

@@ -1,13 +1,13 @@
-package com.example.cl.sprintfinalm6.remote
+package com.example.cl.sprintfinalm6.data.remote
 
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface PhoneApi {
-    @GET("FakeAPIdata/products/")
-    suspend fun getData(): Response<Phone>
+    @GET("products")
+    suspend fun getData(): Response<Phones>
 
-    @GET("/FakeAPIdata/details/{id}")
+    @GET("details/{id}")
     suspend fun  getImages(@Path("id") id:String): Response<DetailPhone>
 }

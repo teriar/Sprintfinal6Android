@@ -1,4 +1,4 @@
-package com.example.cl.sprintfinalm6.local
+package com.example.cl.sprintfinalm6.data.local
 
 import androidx.room.Entity
 

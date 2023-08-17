@@ -1,14 +1,14 @@
-package com.example.cl.sprintfinalm6.local
+package com.example.cl.sprintfinalm6.data.local
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [PhoneEntity::class,PhoneDetailEntity::class], version = 1)
+@Database(entities = [PhoneEntity::class, PhoneDetailEntity::class], version = 1)
 abstract class PhoneDatabase:RoomDatabase() {
 
-    abstract fun getRazaDao():PhoneDao
+    abstract fun getPhoneDao(): PhoneDao
 
     companion object{
         @Volatile
