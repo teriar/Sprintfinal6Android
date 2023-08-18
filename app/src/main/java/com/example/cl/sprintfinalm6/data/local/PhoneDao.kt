@@ -11,7 +11,9 @@ interface PhoneDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertPhone(PhoneEntity: PhoneEntity)
 
-
+    //para pruebas android
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertPhone(razaEntity: List<PhoneEntity>)
 
     @Query("Select * from table_Phone order by id asc")
     fun getPhones(): LiveData<List<PhoneEntity>>
