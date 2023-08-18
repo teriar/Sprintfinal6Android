@@ -38,27 +38,8 @@ class BreedRoomDatabase {
     }
 
     @Test
-    fun insertBreeds_empty() = runBlocking {
-        // Given
-        val breedList = PhoneEntity(1,"telefono",12345,"https")
-
-        // When
-        breedsDao.insertPhone(breedList)
-
-        // Then A
-        val it = breedsDao.getPhones().getOrAwaitValue()
-        assertThat(it).isNotNull() // assertEquals(it,null)
-        assertThat(it).isEmpty() // assertEquals(it.size,0)
 
 
-        // Then B
-        breedsDao.getPhones().observeForever {
-            assertThat(it).isNotNull()
-            assertThat(it).isEmpty()
-        }
-    }
-
-    @Test
     fun insertBreeds_happyCase_1element() = runBlocking {
         // Given
         val breedList = listOf(PhoneEntity(1,"telefonito", 65456,"https://img"))
@@ -77,7 +58,7 @@ class BreedRoomDatabase {
     @Test
     fun insertBreeds_happyCase_3elements() = runBlocking {
         // Given
-        val breedList = listOf(PhoneEntity(1,"telefono1",98654,"https/img1"), PhoneEntity(1,"telefono2",32345,"https:/img2")
+        val breedList = listOf(PhoneEntity(1,"telefono1",98654,"https/img1"), PhoneEntity(2,"telefono2",32345,"https:/img2")
             , PhoneEntity(3,"telefono3",6465464,"https:/img3"))
 
         // When
