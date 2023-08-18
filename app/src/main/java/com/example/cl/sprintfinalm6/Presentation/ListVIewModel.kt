@@ -23,5 +23,8 @@ class ListVIewModel(application: Application):AndroidViewModel(application) {
     fun getDataPhones()= viewModelScope.launch {
         repository.getPhones()
     }
+    fun getDetailPhone(id:Int)=viewModelScope.launch {
+        repository.getDetailPhone(id)
+    }
 
 }

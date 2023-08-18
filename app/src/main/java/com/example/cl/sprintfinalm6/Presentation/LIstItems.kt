@@ -45,6 +45,11 @@ class LIstItems : Fragment() {
     }
 
     private fun initAdapter() {
+        val adapter = Adapter()
+        listVIewModel.phoneLiveData().observe(viewLifecycleOwner){
+            adapter.setData(it)
+        }
+        binding.recyclerView.adapter = adapter
 
     }
 

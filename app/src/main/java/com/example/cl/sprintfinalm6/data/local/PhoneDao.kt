@@ -20,5 +20,5 @@ interface PhoneDao {
     suspend fun insertPhoneDetail(PhoneDetail: PhoneDetailEntity)
 
     @Query("Select * from table_detailPhone where id like :id")
-    fun getDetailPhone(id:Int): LiveData<List<PhoneDetailEntity>>
+    fun getDetailPhone(id:Int): LiveData<PhoneDetailEntity>
 }
